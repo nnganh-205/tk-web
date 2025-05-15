@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Câu 4 - Form Đăng Ký</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    :root {
+      --yellow: #ffe700;
+      --green-light: #00e56b;
+      --green-dark: #00b253;
+      --blue-light: #2fcbff;
+      --blue-dark: #2f63ff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f2f2f2;
+      padding: 2rem;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background: #ffffff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: var(--blue-dark);
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    input, select {
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      padding: 0.75rem;
+      background: var(--green-dark);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: var(--green-light);
+    }
+
+    /* Responsive cho điện thoại */
+    @media (max-width: 414px) {
+      input, select, button, label {
+        font-size: 14px;
+      }
+    }
+    @media (min-width: 415px) and (max-width: 1024px) {
+  .container {
+    max-width: 80%;
+  }
+}
+
+/* Responsive cho máy tính */
+@media (min-width: 1025px) {
+  .container {
+    max-width: 600px;
+  }
+}
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Form Đăng Ký Khóa Học</h2>
+  <form id="regForm">
+    <label>Họ và tên
+      <input type="text" id="fullname" required>
+    </label>
+    <label>Địa chỉ email
+      <input type="email" id="email" required>
+    </label>
+    <label>Số điện thoại
+      <input type="tel" id="phone" required pattern="\d{9,11}">
+    </label>
+    <label>Khóa học muốn đăng ký
+      <select id="course" required>
+        <option value="">--Chọn khóa học--</option>
+        <option value="Basic English">Basic English</option>
+        <option value="Intermediate Conversation">Intermediate Conversation</option>
+        <option value="IELTS Intensive">IELTS Intensive</option>
+        <option value="Business English">Business English</option>
+      </select>
+    </label>
+    <label>Thời gian ưu tiên học
+      <input type="time" id="preftime" required>
+    </label>
+    <button type="submit">Gửi đăng ký</button>
+  </form>
+</div>
+
+<script>
+  document.getElementById('regForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    const name = document.getElementById('fullname').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    if(!name || !email || !phone){
+      alert('Vui lòng điền đầy đủ thông tin!');
+      return;
+    }
+    if(!/^\d{9,11}$/.test(phone)){
+      alert('Số điện thoại phải từ 9–11 chữ số');
+      return;
+    }
+    alert('Đăng ký thành công! Chúng tôi sẽ liên hệ với bạn sớm.');
+    this.reset();
+  });
+</script>
+
+</body>
+</html>

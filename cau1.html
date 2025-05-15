@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>English Learning</title>
+  <style>
+    :root {
+      --yellow: #ffe700;
+      --green-light: #00e56b;
+      --green-dark: #00b253;
+      --blue-light: #2fcbff;
+      --blue-dark: #2f63ff;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      background: var(--blue-dark);
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    header svg {
+      width: 48px;
+      height: 48px;
+      flex-shrink: 0;
+    }
+
+    .navigation {
+      background: var(--blue-light);
+      width: 100%;
+    }
+
+    .navigation ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding: 1rem 2rem;
+      justify-content: center;
+    }
+
+    .navigation a {
+      color: #000;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .navigation a:hover {
+      color: white;
+    }
+
+    main {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    main img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <!-- Logo SVG -->
+    <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-label="English Learning Logo">
+      <circle cx="32" cy="32" r="32" fill="#2fcbff"/>
+      <text x="32" y="38" font-size="28" text-anchor="middle" fill="#2f63ff" font-family="Arial" font-weight="bold">EL</text>
+    </svg>
+    <h1>English Learning</h1>
+  </header>
+
+  <!-- Navigation bằng div -->
+  <div class="navigation">
+    <ul>
+      <li><a href="#home">Trang chủ</a></li>
+      <li><a href="#courses">Khóa học</a></li>
+      <li><a href="#about">Giới thiệu</a></li>
+      <li><a href="#contact">Liên hệ</a></li>
+    </ul>
+  </div>
+
+  <!-- Bài viết khóa học -->
+  <main>
+    <article>
+      <h2>Khóa học Tiếng Anh Giao Tiếp Cơ Bản</h2>
+      <img src="https://dummyimage.com/800x300/2f63ff/ffffff&text=English+Course" alt="English course banner">
+      <p><strong>English Learning</strong> tự hào giới thiệu khóa học <strong>Giao Tiếp Cơ Bản</strong> dành cho người mới bắt đầu. Khóa học tập trung xây dựng nền tảng từ vựng và phát âm chuẩn thông qua phương pháp học tương tác và các hoạt động giao tiếp thực tế.</p>
+    </article>
+  </main>
+
+</body>
+</html>

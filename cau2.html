@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Learning</title>
+</head>
+<style>
+    :root {
+  --yellow: #ffe700;
+  --green-light: #00e56b;
+  --green-dark: #00b253;
+  --blue-light: #2fcbff;
+  --blue-dark: #2f63ff;
+  --item-size: 220px;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+.advert {
+  width: 100%;
+  height: 200px;
+  border: 2px solid var(--blue-dark);
+  background: var(--yellow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  transition: all .3s ease;
+}
+.item {
+  width: var(--item-size);
+  height: var(--item-size);
+  background: var(--blue-light);
+  margin: 0.5rem;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+body {
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+</style>
+<body>
+        <div class="item">item1</div>
+        <div class="item">item2</div>
+        <div class="item">item3</div>
+        <div class="item">item4</div>
+        <div class="advert">Dang ki ngay de nhan khuyen mai</div>
+</body>
+</html>
